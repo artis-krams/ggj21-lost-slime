@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://Movement.gd" type="Script" id=1]
 [ext_resource path="res://art/Slime/Right/Right1.png" type="Texture" id=2]
@@ -41,6 +41,7 @@
 [ext_resource path="res://art/Slime/Down/Down3.png" type="Texture" id=39]
 [ext_resource path="res://art/Slime/Down/Down4.png" type="Texture" id=40]
 [ext_resource path="res://art/Slime/Down/Down5.png" type="Texture" id=41]
+[ext_resource path="res://FirstLevel.tscn" type="PackedScene" id=42]
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 35.9018
@@ -91,6 +92,8 @@ position = Vector2( -8.00012, 1.99997 )
 scale = Vector2( 24.375, 16.5313 )
 texture = ExtResource( 5 )
 
+[node name="Node2D" parent="." instance=ExtResource( 42 )]
+
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 script = ExtResource( 1 )
 
@@ -98,7 +101,7 @@ script = ExtResource( 1 )
 position = Vector2( 28.0556, -15.5274 )
 scale = Vector2( 0.46613, 0.46613 )
 texture = ExtResource( 3 )
-color = Color( 0.929412, 0.560784, 0.0862745, 1 )
+color = Color( 0.623529, 0.372549, 0.101961, 1 )
 shadow_enabled = true
 
 [node name="Sprite" type="Sprite" parent="KinematicBody2D/Light2D"]
@@ -115,6 +118,11 @@ position = Vector2( -0.529718, -14.8325 )
 scale = Vector2( 2.27467, 2.27467 )
 frames = SubResource( 4 )
 animation = "run_down"
+
+[node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
+position = Vector2( 28.0556, -15.5274 )
+scale = Vector2( 0.46613, 0.46613 )
+current = true
 
 [node name="Koki" type="Node2D" parent="."]
 

@@ -1,0 +1,13 @@
+[gd_scene format=2]
+
+[node name="MiniMap" type="MarginContainer"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 5.0
+margin_bottom = 5.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+region_rect = Rect2( 632, 169, 0, 2 )
