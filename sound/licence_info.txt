@@ -34,3 +34,27 @@ There are some important limits to these rights, described in our User Terms.
 
 
 
+
+
+
+
+
+
+Source:
+https://opengameart.org/content/sand-step-movement-sounds-yo-frankie
+
+Files:
+sfx_step_sand_l.ogg
+sfx_step_sand_r.ogg
+
+
+Licence:
+Attribution 3.0 Unported (CC BY 3.0) 
+
+
+
+
+
+
+
+
