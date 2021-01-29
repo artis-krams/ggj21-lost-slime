@@ -10,6 +10,9 @@ extends Area2D
 func _ready():
 	$AnimationPlayer.play('torch')
 
+func play_anim(anim):
+	$AnimationPlayer.play(anim)
+
 func _on_Torch_body_entered(body):
 	if body.is_in_group('player'):
 		print_debug('is player!')
