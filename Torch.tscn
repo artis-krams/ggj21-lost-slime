@@ -27,6 +27,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [ ExtResource( 7 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 6 ) ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Light2D:texture_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.8 ]
+}
 
 [sub_resource type="Animation" id=3]
 resource_name = "torch_l"
@@ -66,6 +78,18 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( -1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Light2D:texture_scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.8 ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -107,9 +131,21 @@ tracks/2/keys = {
 "update": 0,
 "values": [ Vector2( 1, 1 ) ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("Light2D:texture_scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.8 ]
+}
 
 [node name="Torch" type="Area2D"]
-position = Vector2( 0, -10 )
+position = Vector2( 30, -10 )
 script = ExtResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -120,15 +156,9 @@ shape = SubResource( 1 )
 texture = ExtResource( 1 )
 color = Color( 1, 0.447059, 0, 1 )
 shadow_enabled = true
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 7 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/torch = SubResource( 2 )
