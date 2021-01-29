@@ -1,30 +1,129 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=47 format=2]
 
-[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Movement.gd" type="Script" id=1]
+[ext_resource path="res://art/Slime/Right/Right1.png" type="Texture" id=2]
+[ext_resource path="res://light.png" type="Texture" id=3]
+[ext_resource path="res://spot.png" type="Texture" id=4]
 [ext_resource path="res://background.png" type="Texture" id=5]
 [ext_resource path="res://caster.png" type="Texture" id=6]
+[ext_resource path="res://art/Slime/Idle/Idle1.png" type="Texture" id=7]
+[ext_resource path="res://art/Slime/Run3.png" type="Texture" id=8]
+[ext_resource path="res://art/Slime/Idle/Idle2.png" type="Texture" id=9]
+[ext_resource path="res://art/Slime/Idle/Idle3.png" type="Texture" id=10]
+[ext_resource path="res://art/Slime/Idle/Idle6.png" type="Texture" id=11]
+[ext_resource path="res://art/Slime/Idle/Idle5.png" type="Texture" id=12]
+[ext_resource path="res://art/Slime/Run6.png" type="Texture" id=13]
+[ext_resource path="res://art/Slime/Run4.png" type="Texture" id=14]
+[ext_resource path="res://art/Slime/Run1.png" type="Texture" id=15]
+[ext_resource path="res://art/Slime/Run2.png" type="Texture" id=16]
+[ext_resource path="res://art/Slime/Idle/Idle4.png" type="Texture" id=17]
+[ext_resource path="res://art/Slime/Run5.png" type="Texture" id=18]
+[ext_resource path="res://art/Slime/Right/Right5.png" type="Texture" id=19]
+[ext_resource path="res://art/Slime/Right/Right6.png" type="Texture" id=20]
+[ext_resource path="res://art/Slime/Right/Right3.png" type="Texture" id=21]
+[ext_resource path="res://art/Slime/Right/Right4.png" type="Texture" id=22]
+[ext_resource path="res://art/Slime/Right/Right2.png" type="Texture" id=23]
+[ext_resource path="res://art/Slime/Up/Up4.png" type="Texture" id=24]
+[ext_resource path="res://art/Slime/Up/Up1.png" type="Texture" id=25]
+[ext_resource path="res://art/Slime/Up/Up3.png" type="Texture" id=26]
+[ext_resource path="res://art/Slime/Up/Up2.png" type="Texture" id=27]
+[ext_resource path="res://art/Slime/Up/Up5.png" type="Texture" id=28]
+[ext_resource path="res://art/Slime/Up/Up6.png" type="Texture" id=29]
+[ext_resource path="res://art/Slime/Left/Left1.png" type="Texture" id=30]
+[ext_resource path="res://art/Slime/Left/Left2.png" type="Texture" id=31]
+[ext_resource path="res://art/Slime/Left/Left5.png" type="Texture" id=32]
+[ext_resource path="res://art/Slime/Down/Down1.png" type="Texture" id=33]
+[ext_resource path="res://art/Slime/Down/Down2.png" type="Texture" id=34]
+[ext_resource path="res://art/Slime/Left/Left3.png" type="Texture" id=35]
+[ext_resource path="res://art/Slime/Left/Left6.png" type="Texture" id=36]
+[ext_resource path="res://art/Slime/Left/Left4.png" type="Texture" id=37]
+[ext_resource path="res://art/Slime/Down/Down6.png" type="Texture" id=38]
+[ext_resource path="res://art/Slime/Down/Down3.png" type="Texture" id=39]
+[ext_resource path="res://art/Slime/Down/Down4.png" type="Texture" id=40]
+[ext_resource path="res://art/Slime/Down/Down5.png" type="Texture" id=41]
 [ext_resource path="res://FirstLevel.tscn" type="PackedScene" id=42]
 
-[sub_resource type="OccluderPolygon2D" id=3]
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 35.3131, 21.9332 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 17 ), ExtResource( 12 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 8 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "run",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 33 ), ExtResource( 34 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 38 ) ],
+"loop": true,
+"name": "run_down",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 23 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 19 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "run_right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 30 ), ExtResource( 31 ), ExtResource( 35 ), ExtResource( 37 ), ExtResource( 32 ), ExtResource( 36 ) ],
+"loop": true,
+"name": "run_left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 25 ), ExtResource( 27 ), ExtResource( 26 ), ExtResource( 24 ), ExtResource( 28 ), ExtResource( 29 ) ],
+"loop": true,
+"name": "run_up",
+"speed": 5.0
+} ]
+
+[sub_resource type="OccluderPolygon2D" id=1]
 polygon = PoolVector2Array( -219.124, 124.423, -187.658, 125.13, -188.365, 92.6034, -218.771, 92.9569 )
 
-[sub_resource type="CircleShape2D" id=4]
+[sub_resource type="CircleShape2D" id=3]
 radius = 19.7079
 
 [node name="Node2D" type="Node2D"]
 
 [node name="BackgroundSprite" type="Sprite" parent="."]
-position = Vector2( -9.88788, 1.99997 )
+position = Vector2( -8.00012, 1.99997 )
 scale = Vector2( 24.375, 16.5313 )
 texture = ExtResource( 5 )
 
 [node name="Node2D" parent="." instance=ExtResource( 42 )]
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+script = ExtResource( 1 )
 
-[node name="Camera" type="Camera2D" parent="Player"]
+[node name="Light2D" type="Light2D" parent="KinematicBody2D"]
+position = Vector2( 28.0556, -15.5274 )
+scale = Vector2( 0.46613, 0.46613 )
+texture = ExtResource( 3 )
+color = Color( 0.623529, 0.372549, 0.101961, 1 )
+range_z_min = -414
+shadow_enabled = true
+
+[node name="Sprite" type="Sprite" parent="KinematicBody2D/Light2D"]
+position = Vector2( -0.999573, 0.881851 )
+scale = Vector2( 0.354832, 0.354832 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( -0.629883, 0 )
+shape = SubResource( 5 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D"]
+position = Vector2( -0.529718, -14.8325 )
+scale = Vector2( 2.27467, 2.27467 )
+frames = SubResource( 4 )
+animation = "run_down"
+
+[node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
+position = Vector2( 28.0556, -15.5274 )
+scale = Vector2( 0.46613, 0.46613 )
 current = true
-smoothing_enabled = true
 
 [node name="Koki" type="Node2D" parent="."]
 
@@ -36,8 +135,11 @@ texture = ExtResource( 6 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Koki/StaticBody2D/Sprite"]
 position = Vector2( 204, -108 )
-occluder = SubResource( 3 )
+occluder = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Koki/StaticBody2D"]
 position = Vector2( 153.622, 77.3408 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0.105882, 0.105882, 0.105882, 1 )

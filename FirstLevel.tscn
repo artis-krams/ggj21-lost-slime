@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://art/Tile set/Ground-Center.png" type="Texture" id=1]
 [ext_resource path="res://art/Tile set/Ground-Bot.png" type="Texture" id=2]
@@ -14,6 +14,9 @@
 [ext_resource path="res://art/Tile set/Ground-Right.png" type="Texture" id=12]
 [ext_resource path="res://art/Tile set/Ground-Corner-BL.png" type="Texture" id=13]
 [ext_resource path="res://art/Tile set/Bush.png" type="Texture" id=14]
+
+[sub_resource type="OccluderPolygon2D" id=14]
+polygon = PoolVector2Array( 63.9695, 63.9695, 0.0133438, 64.131, -0.148163, 57.5093, 63.9695, 57.3478 )
 
 [sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 64, 64, 0, 64, 0, 32, 64, 32 )
@@ -64,6 +67,7 @@ points = PoolVector2Array( 64, 0, 64, 64, 0, 0, 0, 0 )
 1/region = Rect2( 0, 0, 64, 64 )
 1/tile_mode = 0
 1/occluder_offset = Vector2( 0, 0 )
+1/occluder = SubResource( 14 )
 1/navigation_offset = Vector2( 0, 0 )
 1/shape_offset = Vector2( 0, 0 )
 1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -331,6 +335,9 @@ points = PoolVector2Array( 64, 0, 64, 64, 0, 0, 0, 0 )
 15/shapes = [  ]
 15/z_index = 0
 
+[sub_resource type="OccluderPolygon2D" id=13]
+polygon = PoolVector2Array( 3.34663, 35.2271, 10.749, 28.3856, 17.8148, 22.3291, 32.1709, 20.3103, 41.0313, 24.1236, 54.2657, 22.217, 56.5089, 27.8248, 63.0139, 33.2083, 64.1355, 55.6396, 57.5183, 63.042, 36.3207, 58.8922, 30.9372, 64.5, 26.563, 58.1071, 13.1043, 63.7149, 8.39368, 59.5651, 1.32782, 60.2381, 3.01016, 52.4993, 2.00076, 41.9565 )
+
 [sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 0, 32, 64, 32, 64, 64, 0, 64 )
 
@@ -342,6 +349,7 @@ points = PoolVector2Array( 0, 32, 64, 32, 64, 64, 0, 64 )
 0/region = Rect2( 0, 0, 64, 64 )
 0/tile_mode = 0
 0/occluder_offset = Vector2( 0, 0 )
+0/occluder = SubResource( 13 )
 0/navigation_offset = Vector2( 0, 0 )
 0/shape_offset = Vector2( 0, 0 )
 0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
