@@ -8,6 +8,10 @@ var velocity = Vector2()
 
 func _process(delta):
 	if held_item:
+		if velocity.x > 0:
+			held_item.play_anim('torch_r')
+		elif velocity.x < 0:
+			held_item.play_anim('torch_l')
 		held_item.position += global_position
 
 func get_input():
