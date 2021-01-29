@@ -88,8 +88,3 @@ position = Vector2( -0.529718, -14.8325 )
 scale = Vector2( 2.27467, 2.27467 )
 frames = SubResource( 2 )
 animation = "run_down"
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 28.0556, -15.5274 )
-scale = Vector2( 0.46613, 0.46613 )
-current = true
