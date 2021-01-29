@@ -53,6 +53,11 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 8 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "run",
+"speed": 7.0
+}, {
 "frames": [ ExtResource( 33 ), ExtResource( 34 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 38 ) ],
 "loop": true,
 "name": "run_down",
@@ -72,11 +77,6 @@ animations = [ {
 "loop": true,
 "name": "run_left",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 8 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 13 ) ],
-"loop": true,
-"name": "run",
-"speed": 7.0
 } ]
 
 [sub_resource type="OccluderPolygon2D" id=3]
