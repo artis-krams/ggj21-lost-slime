@@ -43,10 +43,10 @@
 [ext_resource path="res://art/Slime/Down/Down5.png" type="Texture" id=41]
 [ext_resource path="res://FirstLevel.tscn" type="PackedScene" id=42]
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 35.3131, 21.9332 )
 
-[sub_resource type="SpriteFrames" id=4]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 7 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 17 ), ExtResource( 12 ), ExtResource( 11 ) ],
 "loop": true,
@@ -58,11 +58,6 @@ animations = [ {
 "name": "run",
 "speed": 7.0
 }, {
-"frames": [ ExtResource( 33 ), ExtResource( 34 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 38 ) ],
-"loop": true,
-"name": "run_down",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 2 ), ExtResource( 23 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 19 ), ExtResource( 20 ) ],
 "loop": true,
 "name": "run_right",
@@ -73,16 +68,21 @@ animations = [ {
 "name": "run_left",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 33 ), ExtResource( 34 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 38 ) ],
+"loop": true,
+"name": "run_down",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 25 ), ExtResource( 27 ), ExtResource( 26 ), ExtResource( 24 ), ExtResource( 28 ), ExtResource( 29 ) ],
 "loop": true,
 "name": "run_up",
 "speed": 5.0
 } ]
 
-[sub_resource type="OccluderPolygon2D" id=1]
+[sub_resource type="OccluderPolygon2D" id=3]
 polygon = PoolVector2Array( -219.124, 124.423, -187.658, 125.13, -188.365, 92.6034, -218.771, 92.9569 )
 
-[sub_resource type="CircleShape2D" id=3]
+[sub_resource type="CircleShape2D" id=4]
 radius = 19.7079
 
 [node name="Node2D" type="Node2D"]
@@ -94,7 +94,9 @@ texture = ExtResource( 5 )
 
 [node name="Node2D" parent="." instance=ExtResource( 42 )]
 
-[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+[node name="KinematicBody2D" type="KinematicBody2D" parent="." groups=[
+"player",
+]]
 script = ExtResource( 1 )
 
 [node name="Light2D" type="Light2D" parent="KinematicBody2D"]
@@ -111,12 +113,12 @@ texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
 position = Vector2( -0.629883, 0 )
-shape = SubResource( 5 )
+shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D"]
 position = Vector2( -0.529718, -14.8325 )
 scale = Vector2( 2.27467, 2.27467 )
-frames = SubResource( 4 )
+frames = SubResource( 2 )
 animation = "run_down"
 
 [node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
@@ -134,8 +136,8 @@ texture = ExtResource( 6 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Koki/StaticBody2D/Sprite"]
 position = Vector2( 204, -108 )
-occluder = SubResource( 1 )
+occluder = SubResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Koki/StaticBody2D"]
 position = Vector2( 153.622, 77.3408 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
