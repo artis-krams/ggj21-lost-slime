@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends Area2D
 
 var speed = 90
 var nav = null setget set_nav
@@ -6,6 +6,7 @@ var path = []
 var targetPosition = Vector2()
 var route = Array()
 var currentRoutePointIndex = 1
+var playerNode = null
 	
 func set_nav(new_nav):
 	nav = new_nav
@@ -24,9 +25,14 @@ func nextTarget():
 		currentRoutePointIndex = 0
 	targetPosition = route[currentRoutePointIndex - 1].position
 	update_path()
-	
 
 func _physics_process(delta):
+	if is_instance_valid(playerNode):
+		print_debug(playerNode.position)
+		if targetPosition != playerNode.position:
+			targetPosition = playerNode.position
+			update_path()
+		
 	if path.size() > 1:
 		var d = position.distance_to(path[0])
 		if d > 2:
@@ -35,3 +41,17 @@ func _physics_process(delta):
 			path.remove(0)
 	else:
 		nextTarget()
+
+func _on_Enemy_body_entered(body):
+	print_debug('dieded')
+
+
+func _on_SightRangeArea2D_body_entered(body):
+	if body.get_collision_layer_bit(0) && body.position.x != 0:
+		print_debug('follow')
+		print_debug(body.position)
+		playerNode = body
+
+
+#func _on_SightRangeArea2D_body_exited(body):
+		#nextTarget()
