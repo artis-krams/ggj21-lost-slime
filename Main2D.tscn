@@ -19,6 +19,7 @@ texture = ExtResource( 5 )
 
 [node name="FootSteps" type="AudioStreamPlayer" parent="Player"]
 stream = ExtResource( 3 )
+volume_db = -14.374
 pitch_scale = 0.65
 
 [node name="Camera" type="Camera2D" parent="Player"]
