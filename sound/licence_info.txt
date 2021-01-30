@@ -8,6 +8,7 @@ Files:
 mixkit-forest-ambience-with-croaking-frogs-1241.wav
 mixkit-windy-forest-with-woodpeckers-1218.wav
 mixkit-windy-humming-forest-with-birds-1238.wav
+torch_fire.ogg -> original label: mixkit-campfire-crackles-1330.wav
 
 
 Licence:
@@ -44,12 +45,33 @@ Source:
 https://opengameart.org/content/sand-step-movement-sounds-yo-frankie
 
 Files:
+click_sound.ogg
+click_sound_1.ogg
+click_sound_2.ogg
+click_sound_4.ogg
+click_sound_5.ogg
+click_sound_6.ogg
+Round1.ogg
+Round2.ogg
+Round3.ogg
+Round4.ogg
+sfx_step_sand_l_2.ogg
 sfx_step_sand_l.ogg
-sfx_step_sand_r.ogg
+Punch1.ogg
+Punch2.ogg
+Punch3.ogg
+Punch4.ogg
+Punch5.ogg
+Death1.ogg
+Death2.ogg
+Fatality.ogg
+Fight.ogg
+The Good Fight (w intro).ogg
 
 
 Licence:
 Attribution 3.0 Unported (CC BY 3.0) 
+
 
 
 

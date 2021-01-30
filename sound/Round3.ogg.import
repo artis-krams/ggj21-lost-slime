@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Round3.ogg-e02d3b38c81912d0a694e9775185f222.oggstr"
+
+[deps]
+
+source_file="res://sound/Round3.ogg"
+dest_files=[ "res://.import/Round3.ogg-e02d3b38c81912d0a694e9775185f222.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
