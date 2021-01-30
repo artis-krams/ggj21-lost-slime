@@ -1,19 +1,30 @@
 extends KinematicBody2D
 
-var speed = 150
+var speed = 90
 var nav = null setget set_nav
 var path = []
 var targetPosition = Vector2()
-
+var route = Array()
+var currentRoutePointIndex = 1
+	
 func set_nav(new_nav):
 	nav = new_nav
 	update_path()
 
+func setRoute(new_route):
+	route = new_route
+	
 func update_path():
 	path = nav.get_simple_path(position, targetPosition, false)
-	print_debug(path.size())
-	if path.size() == 0:
-		queue_free()
+
+func nextTarget():
+	if(currentRoutePointIndex < route.size()):
+		currentRoutePointIndex += 1
+	else:
+		currentRoutePointIndex = 0
+	targetPosition = route[currentRoutePointIndex - 1].position
+	update_path()
+	
 
 func _physics_process(delta):
 	if path.size() > 1:
@@ -23,4 +34,4 @@ func _physics_process(delta):
 		else:
 			path.remove(0)
 	else:
-		queue_free()
+		nextTarget()
