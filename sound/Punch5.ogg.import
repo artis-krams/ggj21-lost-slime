@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Punch5.ogg-aa365a8d7265794b351de5ab3e629c48.oggstr"
+
+[deps]
+
+source_file="res://sound/Punch5.ogg"
+dest_files=[ "res://.import/Punch5.ogg-aa365a8d7265794b351de5ab3e629c48.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
