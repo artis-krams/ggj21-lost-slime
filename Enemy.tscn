@@ -1,16 +1,14 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://art/Slime/Run3.png" type="Texture" id=1]
-[ext_resource path="res://art/Slime/Run4.png" type="Texture" id=2]
-[ext_resource path="res://art/Slime/Run1.png" type="Texture" id=3]
-[ext_resource path="res://art/Slime/Run2.png" type="Texture" id=4]
-[ext_resource path="res://art/Slime/Run6.png" type="Texture" id=5]
-[ext_resource path="res://art/Slime/Run5.png" type="Texture" id=6]
+[ext_resource path="res://art/Enemy/Player1.png" type="Texture" id=1]
+[ext_resource path="res://art/Enemy/Player4.png" type="Texture" id=2]
+[ext_resource path="res://art/Enemy/Player3.png" type="Texture" id=3]
+[ext_resource path="res://art/Enemy/Player2.png" type="Texture" id=4]
 [ext_resource path="res://Enemy.gd" type="Script" id=7]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 5 ) ],
+"frames": [ ExtResource( 1 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -20,7 +18,7 @@ animations = [ {
 radius = 9.06314
 
 [sub_resource type="CircleShape2D" id=3]
-radius = 137.267
+radius = 222.332
 
 [node name="Enemy" type="Area2D"]
 collision_layer = 4

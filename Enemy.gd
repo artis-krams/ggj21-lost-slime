@@ -26,10 +26,10 @@ func nextTarget():
 	targetPosition = route[currentRoutePointIndex - 1].position
 	update_path()
 
-func _physics_process(delta):
+func _process(delta):
 	if is_instance_valid(playerNode):
-		print_debug(playerNode.position)
-		if targetPosition != playerNode.position:
+		if targetPosition != playerNode.position && targetPosition.distance_to(playerNode.position) > 30:
+			print_debug(playerNode.position)
 			targetPosition = playerNode.position
 			update_path()
 		
@@ -43,7 +43,8 @@ func _physics_process(delta):
 		nextTarget()
 
 func _on_Enemy_body_entered(body):
-	print_debug('dieded')
+	if body.get_collision_layer_bit(0):
+		print_debug('dieded')
 
 
 func _on_SightRangeArea2D_body_entered(body):
@@ -53,5 +54,6 @@ func _on_SightRangeArea2D_body_entered(body):
 		playerNode = body
 
 
-#func _on_SightRangeArea2D_body_exited(body):
-		#nextTarget()
+func _on_SightRangeArea2D_body_exited(body):
+		playerNode = null
+		nextTarget()

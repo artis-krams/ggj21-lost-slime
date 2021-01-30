@@ -27,7 +27,7 @@ vertices = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [sub_resource type="NavigationPolygon" id=2]
-vertices = PoolVector2Array( 64, 51, 0, 51, 0, 0, 64, 0 )
+vertices = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [sub_resource type="OccluderPolygon2D" id=3]
@@ -37,7 +37,7 @@ polygon = PoolVector2Array( 0, 54.2792, 2.27442, 53.9562, 5.50453, 57.3478, 5.98
 points = PoolVector2Array( 64, 64, 0, 64, 0, 32, 64, 32 )
 
 [sub_resource type="NavigationPolygon" id=5]
-vertices = PoolVector2Array( 12, 64, 64, 64, 64, 0, 12, 0 )
+vertices = PoolVector2Array( 0, 64, 64, 64, 64, 0, 0, 0 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [sub_resource type="OccluderPolygon2D" id=6]
@@ -47,7 +47,7 @@ polygon = PoolVector2Array( 9.38066, 0, 10.0267, 2.59743, 6.79658, 5.34303, 10.9
 points = PoolVector2Array( 0, 0, 32, 0, 32, 64, 0, 64 )
 
 [sub_resource type="NavigationPolygon" id=8]
-vertices = PoolVector2Array( 53, 64, 0, 64, 0, 0, 53, 0 )
+vertices = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [sub_resource type="OccluderPolygon2D" id=9]
@@ -57,7 +57,7 @@ polygon = PoolVector2Array( 52.9872, 0, 52.9872, 2.75893, 57.8323, 7.11958, 55.2
 points = PoolVector2Array( 32, 0, 64, 0, 64, 64, 32, 64 )
 
 [sub_resource type="NavigationPolygon" id=11]
-vertices = PoolVector2Array( 0, 14, 64, 14, 64, 64, 0, 64 )
+vertices = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [sub_resource type="OccluderPolygon2D" id=12]
@@ -137,7 +137,7 @@ polygon = PoolVector2Array( 64, 3.95407, 56.4214, 3.67499, 53.3515, 7.02397, 48.
 polygon = PoolVector2Array( 0, 0, 64, 0, 61.1658, 12.3265, 64, 14.5592, 64, 17.35, 60.6077, 20.699, 61.724, 25.4434, 57.8168, 29.0714, 59.7704, 32.4204, 61.724, 42.7464, 58.375, 43.3046, 63.9566, 49.1653, 59.4913, 60.6076, 50.2816, 62.5612, 47.4908, 58.0959, 46.6536, 63.1194, 36.3275, 63.9566, 27.676, 59.2122, 27.676, 63.1194, 22.6525, 63.1194, 19.8617, 60.3286, 14.8383, 60.6076, 10.9311, 56.9796, 0, 61.724 )
 
 [sub_resource type="NavigationPolygon" id=36]
-vertices = PoolVector2Array( 12, 51, 64, 51, 64, 0, 12, 0 )
+vertices = PoolVector2Array( 0, 64, 64, 64, 64, 0, 0, 0 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [sub_resource type="OccluderPolygon2D" id=37]
@@ -147,7 +147,7 @@ polygon = PoolVector2Array( 10.3497, 0, 9.86518, 2.59743, 6.79658, 5.34303, 11.6
 points = PoolVector2Array( 0, 0, 32, 32, 64, 64, 0, 64 )
 
 [sub_resource type="NavigationPolygon" id=39]
-vertices = PoolVector2Array( 53, 54, 0, 54, 0, 0, 53, 0 )
+vertices = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [sub_resource type="OccluderPolygon2D" id=40]
@@ -157,7 +157,7 @@ polygon = PoolVector2Array( 0, 53.7947, 2.59743, 53.9562, 5.18152, 57.0248, 7.11
 points = PoolVector2Array( 64, 64, 0, 64, 64, 0, 64, 0 )
 
 [sub_resource type="NavigationPolygon" id=42]
-vertices = PoolVector2Array( 9, 10, 64, 10, 64, 64, 9, 64 )
+vertices = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [sub_resource type="OccluderPolygon2D" id=43]
@@ -167,7 +167,7 @@ polygon = PoolVector2Array( 0, 0, 64, 0, 64, 9.38066, 61.2239, 9.86518, 58.1553,
 points = PoolVector2Array( 64, 0, 64, 0, 0, 64, 0, 0 )
 
 [sub_resource type="NavigationPolygon" id=45]
-vertices = PoolVector2Array( 54, 11, 0, 11, 0, 64, 54, 64 )
+vertices = PoolVector2Array( 64, 0, 0, 0, 0, 64, 64, 64 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [sub_resource type="OccluderPolygon2D" id=46]
