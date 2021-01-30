@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://Movement.gd" type="Script" id=1]
 [ext_resource path="res://art/Slime/Right/Right2.png" type="Texture" id=2]
@@ -34,9 +34,15 @@
 [ext_resource path="res://art/Slime/Down/Down5.png" type="Texture" id=32]
 [ext_resource path="res://art/Slime/Left/Left3.png" type="Texture" id=33]
 [ext_resource path="res://art/Slime/Left/Left1.png" type="Texture" id=34]
+[ext_resource path="res://art/Dead/Run7.png" type="Texture" id=35]
 [ext_resource path="res://art/Slime/Run6.png" type="Texture" id=36]
 [ext_resource path="res://art/Slime/Up/Up6.png" type="Texture" id=37]
 [ext_resource path="res://art/Slime/Left/Left4.png" type="Texture" id=38]
+[ext_resource path="res://art/Dead/Run11.png" type="Texture" id=39]
+[ext_resource path="res://art/Dead/Run8.png" type="Texture" id=40]
+[ext_resource path="res://art/Dead/Run6.png" type="Texture" id=41]
+[ext_resource path="res://art/Dead/Run9.png" type="Texture" id=42]
+[ext_resource path="res://art/Dead/Run10.png" type="Texture" id=43]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 15.0061
@@ -72,6 +78,11 @@ animations = [ {
 "loop": true,
 "name": "run_up",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 41 ), ExtResource( 35 ), ExtResource( 40 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 39 ) ],
+"loop": false,
+"name": "done",
+"speed": 5.0
 } ]
 
 [node name="Player" type="KinematicBody2D" groups=[
@@ -87,4 +98,4 @@ shape = SubResource( 1 )
 position = Vector2( -0.529718, -14.8325 )
 scale = Vector2( 2.27467, 2.27467 )
 frames = SubResource( 2 )
-animation = "idle"
+animation = "done"

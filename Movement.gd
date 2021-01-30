@@ -5,9 +5,12 @@ export (int) var speed = 200
 var held_item
 
 var velocity = Vector2()
+var gameOver = false
 
 func _process(delta):
-	if held_item:
+	if gameOver:
+		$AnimatedSprite.play("done")
+	elif held_item:
 		if velocity.x > 0:
 			held_item.play_anim('torch_r')
 		elif velocity.x < 0:
@@ -43,9 +46,16 @@ func get_input():
 	velocity = velocity.normalized() * speed
 
 func _physics_process(delta):
-	get_input()
-	velocity = move_and_slide(velocity)
+	if gameOver:
+		velocity = 0
+	else:
+		get_input()
+		velocity = move_and_slide(velocity)
 
 func hold_item(item):
 	held_item = item
 	print_debug(held_item)
+
+func goDie():
+	print_debug('deady?')
+	gameOver = true

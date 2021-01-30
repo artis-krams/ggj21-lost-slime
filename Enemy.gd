@@ -29,7 +29,6 @@ func nextTarget():
 func _process(delta):
 	if is_instance_valid(playerNode):
 		if targetPosition != playerNode.position:
-			print_debug(playerNode.position)
 			targetPosition = playerNode.position
 			update_path()
 		
@@ -45,11 +44,11 @@ func _process(delta):
 func _on_Enemy_body_entered(body):
 	if body.get_collision_layer_bit(0):
 		print_debug('dieded')
+		body.goDie()
 
 
 func _on_SightRangeArea2D_body_entered(body):
 	if body.get_collision_layer_bit(0) && body.position.x != 0 && targetPosition.distance_to(body.position) > 30:
-		print_debug('follow')
 		print_debug(body.position)
 		playerNode = body
 
