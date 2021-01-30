@@ -56,11 +56,6 @@ click={
  ]
 }
 
-[layer_names]
-
-2d_physics/layer_1="player"
-2d_physics/layer_2="bush"
-
 [rendering]
 
 environment/default_clear_color=Color( 0, 0, 0, 1 )

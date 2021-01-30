@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends AnimatedSprite
+
+var speed = 150
+var nav = null setget set_nav
+var path = []
+var goal = Vector2()
+
+func set_nav(new_nav):
+	nav = new_nav
+	update_path()
+
+func update_path():
+	path = nav.get_simple_path(position, goal, false)
+	if path.size() == 0:
+		queue_free()
+
+func _process(delta):
+	if path.size() > 1:
+		var d = position.distance_to(path[0])
+		if d > 2:
+			position = position.linear_interpolate(path[0], (speed * delta)/d)
+		else:
+			path.remove(0)
+	else:
+		queue_free()
+"
+
+[node name="AnimatedSprite" type="Node2D"]
+script = SubResource( 1 )

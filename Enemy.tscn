@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://art/Slime/Run3.png" type="Texture" id=1]
 [ext_resource path="res://art/Slime/Run4.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://art/Slime/Run2.png" type="Texture" id=4]
 [ext_resource path="res://art/Slime/Run6.png" type="Texture" id=5]
 [ext_resource path="res://art/Slime/Run5.png" type="Texture" id=6]
+[ext_resource path="res://Enemy.gd" type="Script" id=7]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -19,6 +20,7 @@ animations = [ {
 radius = 9.06314
 
 [node name="Enemy" type="KinematicBody2D"]
+script = ExtResource( 7 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 modulate = Color( 0.776471, 0.0941176, 0.0941176, 1 )
