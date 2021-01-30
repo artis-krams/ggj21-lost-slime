@@ -9,6 +9,8 @@ extends Area2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$AnimationPlayer.play('torch')
+	$LightAnim.play("Light")
+	$AudioStreamPlayer2D.play()
 
 func play_anim(anim):
 	$AnimationPlayer.play(anim)
