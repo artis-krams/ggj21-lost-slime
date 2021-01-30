@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Ggj 21 -lost-slime"
-run/main_scene="res://Main2D.tscn"
+run/main_scene="res://MainMenu.tscn"
 boot_splash/image="res://art/UI/Main_Menu.png"
 config/icon="res://icon.png"
 
@@ -61,7 +61,6 @@ click={
 
 2d_physics/layer_1="player"
 2d_physics/layer_2="bush"
-2d_physics/layer_3="enemy"
 
 [rendering]
 
