@@ -82,6 +82,57 @@ autoplay = true
 [node name="RoutePoint" type="Position2D" parent="RoutePoints"]
 position = Vector2( -678.735, -420.967 )
 
+[node name="RoutePoint5" type="Position2D" parent="RoutePoints"]
+position = Vector2( -1139.55, -864.96 )
+
+[node name="RoutePoint6" type="Position2D" parent="RoutePoints"]
+position = Vector2( -1849.26, 547.746 )
+
+[node name="RoutePoint7" type="Position2D" parent="RoutePoints"]
+position = Vector2( -1119.36, 1365.1 )
+
+[node name="RoutePoint8" type="Position2D" parent="RoutePoints"]
+position = Vector2( 115.071, 1408.82 )
+
+[node name="RoutePoint9" type="Position2D" parent="RoutePoints"]
+position = Vector2( 1009.79, 1577 )
+
+[node name="RoutePoint10" type="Position2D" parent="RoutePoints"]
+position = Vector2( 1016.51, 1035.47 )
+
+[node name="RoutePoint11" type="Position2D" parent="RoutePoints"]
+position = Vector2( 2341.77, 308.931 )
+
+[node name="RoutePoint12" type="Position2D" parent="RoutePoints"]
+position = Vector2( 1443.69, -185.516 )
+
+[node name="RoutePoint13" type="Position2D" parent="RoutePoints"]
+position = Vector2( 464.885, -831.324 )
+
+[node name="RoutePoint14" type="Position2D" parent="RoutePoints"]
+position = Vector2( -1647.45, -202.334 )
+
+[node name="RoutePoint15" type="Position2D" parent="RoutePoints"]
+position = Vector2( -1701.26, 231.569 )
+
+[node name="RoutePoint16" type="Position2D" parent="RoutePoints"]
+position = Vector2( -638.372, 393.021 )
+
+[node name="RoutePoint17" type="Position2D" parent="RoutePoints"]
+position = Vector2( 374.068, 638.563 )
+
+[node name="RoutePoint18" type="Position2D" parent="RoutePoints"]
+position = Vector2( -238.105, -336.877 )
+
+[node name="RoutePoint19" type="Position2D" parent="RoutePoints"]
+position = Vector2( -998.275, 793.288 )
+
+[node name="RoutePoint20" type="Position2D" parent="RoutePoints"]
+position = Vector2( 1009.79, -283.06 )
+
+[node name="RoutePoint21" type="Position2D" parent="RoutePoints"]
+position = Vector2( 474.975, 1207.01 )
+
 [node name="RoutePoint2" type="Position2D" parent="RoutePoints"]
 position = Vector2( 294.899, 950.493 )
 
