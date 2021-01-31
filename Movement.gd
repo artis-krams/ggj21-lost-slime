@@ -59,3 +59,9 @@ func hold_item(item):
 func goDie():
 	print_debug('deady?')
 	gameOver = true
+	$DeathSound.play()
+
+
+func _on_AnimatedSprite_animation_finished():
+	if $AnimatedSprite.animation == 'done':
+		Global.game_over(false)

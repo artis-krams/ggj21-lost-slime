@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://Movement.gd" type="Script" id=1]
 [ext_resource path="res://art/Slime/Right/Right2.png" type="Texture" id=2]
@@ -43,6 +43,7 @@
 [ext_resource path="res://art/Dead/Run6.png" type="Texture" id=41]
 [ext_resource path="res://art/Dead/Run9.png" type="Texture" id=42]
 [ext_resource path="res://art/Dead/Run10.png" type="Texture" id=43]
+[ext_resource path="res://sound/Death1.ogg" type="AudioStream" id=44]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 15.0061
@@ -54,19 +55,9 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 12 ), ExtResource( 16 ), ExtResource( 24 ), ExtResource( 9 ), ExtResource( 36 ) ],
-"loop": true,
-"name": "run",
-"speed": 7.0
-}, {
 "frames": [ ExtResource( 18 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 31 ), ExtResource( 21 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "run_right",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 17 ), ExtResource( 25 ), ExtResource( 28 ), ExtResource( 30 ), ExtResource( 32 ), ExtResource( 26 ) ],
-"loop": true,
-"name": "run_down",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 34 ), ExtResource( 22 ), ExtResource( 33 ), ExtResource( 38 ), ExtResource( 23 ), ExtResource( 29 ) ],
@@ -74,15 +65,25 @@ animations = [ {
 "name": "run_left",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 41 ), ExtResource( 35 ), ExtResource( 40 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 39 ) ],
+"loop": false,
+"name": "done",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 25 ), ExtResource( 28 ), ExtResource( 30 ), ExtResource( 32 ), ExtResource( 26 ) ],
+"loop": true,
+"name": "run_down",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 15 ), ExtResource( 37 ) ],
 "loop": true,
 "name": "run_up",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 41 ), ExtResource( 35 ), ExtResource( 40 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 39 ) ],
-"loop": false,
-"name": "done",
-"speed": 5.0
+"frames": [ ExtResource( 7 ), ExtResource( 12 ), ExtResource( 16 ), ExtResource( 24 ), ExtResource( 9 ), ExtResource( 36 ) ],
+"loop": true,
+"name": "run",
+"speed": 7.0
 } ]
 
 [node name="Player" type="KinematicBody2D" groups=[
@@ -99,3 +100,7 @@ position = Vector2( -0.529718, -14.8325 )
 scale = Vector2( 2.27467, 2.27467 )
 frames = SubResource( 2 )
 animation = "done"
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 44 )
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
