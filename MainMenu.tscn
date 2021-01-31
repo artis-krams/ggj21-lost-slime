@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://art/UI/Main_Menu.png" type="Texture" id=1]
 [ext_resource path="res://art/UI/Button.png" type="Texture" id=2]
@@ -9,8 +9,12 @@
 [ext_resource path="res://sound/click_sound_4.ogg" type="AudioStream" id=7]
 [ext_resource path="res://sound/The Good Fight (w intro).ogg" type="AudioStream" id=8]
 [ext_resource path="res://sound/Fatality.ogg" type="AudioStream" id=9]
+[ext_resource path="res://sound/horn_success.ogg" type="AudioStream" id=10]
 
 [sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 3 )
 
 [node name="MainMenu" type="Control"]
@@ -106,5 +110,77 @@ autoplay = true
 stream = ExtResource( 9 )
 
 [node name="Victory" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+
+[node name="LabelGameOver" type="Label" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 94.422
+margin_top = 83.6976
+margin_right = 350.422
+margin_bottom = 156.698
+custom_fonts/font = SubResource( 2 )
+text = "The slime died 
+and never got to
+say goodbye to
+his family :("
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelVictory" type="Label" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 94.422
+margin_top = 66.7462
+margin_right = 494.422
+margin_bottom = 196.746
+custom_fonts/font = SubResource( 2 )
+text = "Thanks to you
+Mr. Slime
+returned to
+his family alive!
+But he missed his dinner,
+could you be faster?
+"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelHighScore" type="Label" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 23.0
+margin_top = -86.0
+margin_right = 279.0
+margin_bottom = -13.0
+custom_fonts/font = SubResource( 2 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelYourTime" type="Label" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -381.492
+margin_top = -109.0
+margin_right = -125.492
+margin_bottom = -36.0
+custom_fonts/font = SubResource( 2 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="VBoxContainer/BtnStart" to="." method="_on_BtnStart_pressed"]
 [connection signal="pressed" from="VBoxContainer/BtnExit" to="." method="_on_BtnExit_pressed"]

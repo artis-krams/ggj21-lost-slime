@@ -11,5 +11,9 @@ dest_files=[ "res://.import/horn_success.ogg-b9a4f569fbb9e9276aca66d9287efb73.og
 
 [params]
 
+<<<<<<< HEAD
 loop=true
+=======
+loop=false
+>>>>>>> d7a6f76 (High Score)
 loop_offset=0
