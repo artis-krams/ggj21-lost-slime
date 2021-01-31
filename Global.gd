@@ -13,7 +13,7 @@ func reset():
 
 func game_over(victory):
 	is_victory = victory
-	if victory && !high_score || high_score > current_time:
+	if victory && (!high_score || high_score > current_time):
 		high_score = current_time
 		
 	is_game_over = true
