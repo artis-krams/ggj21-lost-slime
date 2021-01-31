@@ -92,7 +92,31 @@ position = Vector2( 217.966, -328.839 )
 position = Vector2( -351.3, 670.949 )
 
 [node name="ArrowEast" parent="." instance=ExtResource( 3 )]
-position = Vector2( -609.607, -74.4241 )
+position = Vector2( -1055.37, 401.796 )
+rotation = 1.5708
+
+[node name="ArrowEast4" parent="." instance=ExtResource( 3 )]
+position = Vector2( -1823.68, 856.744 )
+rotation = 1.5708
+
+[node name="ArrowEast5" parent="." instance=ExtResource( 3 )]
+position = Vector2( -1060.17, 1297.72 )
+rotation = 1.5708
+
+[node name="ArrowEast6" parent="." instance=ExtResource( 3 )]
+position = Vector2( -1382.61, -175.895 )
+rotation = 1.5708
+
+[node name="ArrowEast7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 94.0189, 418.788 )
+rotation = 1.5708
+
+[node name="ArrowEast8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 673.583, 786.685 )
+rotation = 1.5708
+
+[node name="ArrowEast9" parent="." instance=ExtResource( 3 )]
+position = Vector2( 867.61, 854.721 )
 rotation = 1.5708
 
 [node name="ArrowEast2" parent="." instance=ExtResource( 3 )]
@@ -104,22 +128,65 @@ position = Vector2( -288.05, 677.607 )
 rotation = 1.5708
 
 [node name="ArrowNorth" parent="." instance=ExtResource( 3 )]
-position = Vector2( -668.831, -149.344 )
+position = Vector2( -664.672, 784.866 )
+
+[node name="ArrowNorth2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 165.937, 1502.21 )
+
+[node name="ArrowNorth3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 913.486, 1566.39 )
+
+[node name="ArrowNorth4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 991.269, 1101.29 )
+
+[node name="ArrowNorth5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1380.83, 855.563 )
+
+[node name="ArrowNorth6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1308.91, 789.638 )
 
 [node name="ArrowWest" parent="." instance=ExtResource( 3 )]
-position = Vector2( -742.798, 364.019 )
+position = Vector2( 2065.2, 280.019 )
+rotation = -1.5708
+
+[node name="ArrowWest3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1245.92, 466.906 )
+rotation = -1.5708
+
+[node name="ArrowWest4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 931.429, 346.251 )
+rotation = -1.5708
+
+[node name="ArrowWest2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1513.2, -95.981 )
 rotation = -1.5708
 
 [node name="ArrowSouth" parent="." instance=ExtResource( 3 )]
-position = Vector2( -734.825, -405.986 )
+position = Vector2( -732.706, -405.986 )
+rotation = 3.14159
+
+[node name="ArrowSouth4" parent="." instance=ExtResource( 3 )]
+position = Vector2( -484.644, -933.468 )
+rotation = 3.14159
+
+[node name="ArrowSouth5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 342.956, -1061.61 )
+rotation = 3.14159
+
+[node name="ArrowSouth6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 161.418, -677.179 )
 rotation = 3.14159
 
 [node name="ArrowSouth2" parent="." instance=ExtResource( 3 )]
-position = Vector2( -226.825, 356.014 )
+position = Vector2( 229.315, -89.4354 )
+rotation = 3.14159
+
+[node name="ArrowSouth7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 481.712, 421.708 )
 rotation = 3.14159
 
 [node name="ArrowSouth3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 480.753, 427.367 )
+position = Vector2( 1120.67, -801.61 )
 rotation = 3.14159
 
 [node name="VictoryExit" parent="." instance=ExtResource( 4 )]
