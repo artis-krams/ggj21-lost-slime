@@ -20,6 +20,10 @@ run/main_scene="res://MainMenu.tscn"
 boot_splash/image="res://art/UI/Main_Menu.png"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://Global.gd"
+
 [display]
 
 window/stretch/mode="viewport"
